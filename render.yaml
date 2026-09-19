@@ -1,0 +1,21 @@
+# Render.com 蓝图（Blueprint）
+# 用法：把这个 cloud 文件夹整个传到 GitHub 仓库根目录 →
+#       Render 后台 New → Blueprint → 选这个仓库 → Apply
+services:
+  - type: web
+    name: t15-classroom
+    runtime: node
+    plan: free
+    region: singapore          # 离国内最近；也可改 oregon / frankfurt
+    branch: main
+    buildCommand: "echo 'no build needed'"
+    startCommand: "node relay.js"
+    healthCheckPath: /healthz
+    envVars:
+      - key: ROOM
+        value: T15
+      - key: PIN
+        generateValue: false
+        value: ""
+      - key: NODE_VERSION
+        value: "20"

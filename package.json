@@ -1,0 +1,15 @@
+{
+  "name": "t15-classroom-relay",
+  "version": "1.0.0",
+  "private": true,
+  "description": "15.2《电流和电路》云端课堂中继：学生用任意网络扫码进课堂，听课教师可获取课件/作品/教案/任务/留言",
+  "main": "relay.js",
+  "scripts": {
+    "start": "node relay.js",
+    "dev": "node relay.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
